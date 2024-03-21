@@ -29,8 +29,8 @@ lod_p <- summary(operm, alpha=c(0.20, 0.05))
 sum <- summary(out.cim.20, perms=operm, alpha = 0.05,format = "tabByChr",ci.function = "bayesint", pvalues=TRUE)
 #add.threshold(out.cim.20,alpha = 0.05,perms = operm)
 #add.cim.covar(out.cim.20, chr=chr, col="yellow")
-#lodint(out.cim.20, 7, 1.5) # 基于 LOD support intervals
-#bayesint(out.cim.20, 3, 0.95) # 基于 Bayes credible intervals
+#lodint(out.cim.20, 7, 1.5) # LOD support intervals
+#bayesint(out.cim.20, 3, 0.95) # Bayes credible intervals
 mqtl<-makeqtl(ril,chr=sum$lod[,1],pos=sum$lod[,2],what="prob")#make QTL
 #mqtl
 #rqtl<-refineqtl(ril,pheno.col=1, qtl=mqtl,method="hk",model="normal") #Correction of QTL position
