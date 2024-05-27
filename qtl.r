@@ -3,6 +3,7 @@ library(qtl)
 library(ggplot2)
 library(dplyr)
 library(gridExtra)
+set.seed(123)
 ril <- read.cross(format = "csv",".", file = "total_out.input.csv", genotypes = c("a","h","b"),alleles=c("a","b"))
 summary(ril)
 
